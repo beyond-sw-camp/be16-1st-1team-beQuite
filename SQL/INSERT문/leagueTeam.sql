@@ -1,6 +1,6 @@
 -- 선수단 데이터 입력 --
 insert into leagueteam(name, region, stadium, foundedYear) values('LG', '서울', '서울종합운동장 야구장', 1982);
-insert into leagueteam(name, region, stadium, foundedYear) values('롯데', '부산', '사진야구장', 1975);
+insert into leagueteam(name, region, stadium, foundedYear) values('롯데', '부산', '사직야구장', 1975);
 insert into leagueteam(name, region, stadium, foundedYear) values('KIA', '광주', '광주기아챔피언스필드', 1982);
 insert into leagueteam(name, region, stadium, foundedYear) values('삼성', '대구', '대구삼성라이온즈파크', 1982);
 insert into leagueteam(name, region, stadium, foundedYear) values('두산', '서울', '서울종합운동장 야구장', 1982);
