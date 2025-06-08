@@ -1,4 +1,6 @@
 -- USER_05 회원 로그인
+
+-- 기존에 같은 프로시저가 있으면 삭제
 DROP PROCEDURE IF EXISTS 회원로그인;
 DELIMITER //
 

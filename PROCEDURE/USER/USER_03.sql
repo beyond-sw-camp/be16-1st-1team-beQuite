@@ -1,4 +1,5 @@
 -- USER_03 회원정보조회
+
 -- 기존에 같은 프로시저가 있으면 삭제
 DROP PROCEDURE IF EXISTS 회원정보조회;
 DELIMITER //

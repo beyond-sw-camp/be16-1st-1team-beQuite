@@ -1,4 +1,5 @@
 -- USER_01 회원가입
+
 -- 기존에 같은 프로시저가 있으면 삭제
 DROP PROCEDURE IF EXISTS 회원가입;  
 DELIMITER //
@@ -33,7 +34,7 @@ BEGIN
     ) VALUES (
       leagueTeam_id_Input,
       email_Input,
-      password_Input
+      password_Input,
       name_Input,
       phone_Input,
       age_Input,

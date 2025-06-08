@@ -1,4 +1,5 @@
 -- USER_02 회원정보수정
+
 -- 이미 같은 프로시저가 있으면 삭제
 DROP PROCEDURE IF EXISTS 회원정보수정;
 DELIMITER //

@@ -1,3 +1,6 @@
+-- USER_04 회원 탈퇴
+
+-- 기존에 같은 프로시저가 있으면 삭제
 DROP PROCEDURE IF EXISTS 회원탈퇴;
 DELIMITER //
 
