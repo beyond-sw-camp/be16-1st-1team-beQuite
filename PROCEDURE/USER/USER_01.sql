@@ -1,10 +1,12 @@
 -- USER_01 회원가입
+
 -- 기존에 같은 프로시저가 있으면 삭제
 DROP PROCEDURE IF EXISTS 회원가입;  
 DELIMITER //
 CREATE PROCEDURE 회원가입(
     IN leagueTeam_id_Input BIGINT(20),            -- 응원 팀 ID
     IN email_Input         VARCHAR(50),           -- 이메일
+    IN password_Input      VARCHAR(20),           -- 비밀번호
     IN name_Input          VARCHAR(30),           -- 이름
     IN phone_Input         VARCHAR(30),           -- 전화번호
     IN age_Input           TINYINT(4),            -- 나이
@@ -24,6 +26,7 @@ BEGIN
     INSERT INTO `user` (
       leagueTeam_id,
       email,
+      password,
       name,
       phone,
       age,
@@ -31,6 +34,7 @@ BEGIN
     ) VALUES (
       leagueTeam_id_Input,
       email_Input,
+      password_Input,
       name_Input,
       phone_Input,
       age_Input,
