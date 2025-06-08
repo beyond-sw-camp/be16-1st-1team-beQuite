@@ -637,34 +637,6 @@ LOCK TABLES `positioned` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `statbookmark`
---
-
-DROP TABLE IF EXISTS `statbookmark`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8mb4 */;
-CREATE TABLE `statbookmark` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `user_id` bigint(20) NOT NULL,
-  `player_id` bigint(20) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `user_id` (`user_id`),
-  KEY `player_id` (`player_id`),
-  CONSTRAINT `statbookmark_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
-  CONSTRAINT `statbookmark_ibfk_2` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `statbookmark`
---
-
-LOCK TABLES `statbookmark` WRITE;
-/*!40000 ALTER TABLE `statbookmark` DISABLE KEYS */;
-/*!40000 ALTER TABLE `statbookmark` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `user`
 --
 
@@ -705,4 +677,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2025-06-08 19:19:14
+-- Dump completed on 2025-06-08 21:05:43
