@@ -1,0 +1,8 @@
+-- 투수스탯 입력
+LOAD DATA LOCAL INFILE 'C:/Users/young/Downloads/pitcherStats.csv'
+INTO TABLE pitcherStats
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(ERA ,G, W, L, SV, HLD, WLCT, IP, H, HR, BB, HBP, SO, R, ER, WHIP, CG, SHO, QS, BSV, TBF, NP, `AVG`, 2B, 3B, SAC, SF, IBB, WP, BK);
