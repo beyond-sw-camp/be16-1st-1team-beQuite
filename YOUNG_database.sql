@@ -1,3 +1,4 @@
+USE producekbo;
 /*M!999999\- enable the sandbox mode */ 
 -- MariaDB dump 10.19-11.7.2-MariaDB, for Win64 (AMD64)
 --
@@ -77,7 +78,7 @@ LOCK TABLES `allstarcandidate` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `allstarvote`
+-- Table structure for table `allstarvote`batter
 --
 
 DROP TABLE IF EXISTS `allstarvote`;
@@ -3232,8 +3233,9 @@ DROP TABLE IF EXISTS `user`;
 /*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `leagueTeam_id` bigint(20) DEFAULT NULL,
+  `password` varchar(20) NOT NULL,
   `email` varchar(50) NOT NULL,
+  `leagueTeam_id` bigint(20) DEFAULT NULL,
   `name` varchar(30) NOT NULL,
   `phone` varchar(30) NOT NULL,
   `age` tinyint(4) DEFAULT NULL,
