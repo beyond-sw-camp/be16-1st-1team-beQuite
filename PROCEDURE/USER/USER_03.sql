@@ -20,7 +20,8 @@ BEGIN
     SELECT
       leagueTeam_id    AS leagueTeam_id,
       email            AS email,
-      `name`           AS name,
+      'password'       AS password,
+      'name'           AS name,
       phone            AS phone,
       age              AS age,
       role             AS role

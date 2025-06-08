@@ -7,6 +7,7 @@ CREATE PROCEDURE 회원정보수정(
     IN user_id_Input        BIGINT(20),            -- 수정할 회원의 id
     IN leagueTeam_id_Input  BIGINT(20),            -- 새 응원 팀 ID (NULL 허용)
     IN email_Input          VARCHAR(50),           -- 새 이메일
+    IN password_Input       VARCHAR(20),           -- 새 비밀번호
     IN name_Input           VARCHAR(30),           -- 새 이름
     IN phone_Input          VARCHAR(30),           -- 새 전화번호
     IN age_Input            TINYINT(4),            -- 새 나이
@@ -51,6 +52,7 @@ BEGIN
         UPDATE `user`
            SET `leagueTeam_id` = leagueTeam_id_Input,
                `email`        = email_Input,
+               `password`     = password_Input,
                `name`         = name_Input,
                `phone`        = phone_Input,
                `age`          = age_Input,
