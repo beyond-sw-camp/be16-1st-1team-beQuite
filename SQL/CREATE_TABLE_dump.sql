@@ -645,8 +645,9 @@ DROP TABLE IF EXISTS `user`;
 /*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `leagueTeam_id` bigint(20) DEFAULT NULL,
+  `password` varchar(20) NOT NULL,
   `email` varchar(50) NOT NULL,
+  `leagueTeam_id` bigint(20) DEFAULT NULL,
   `name` varchar(30) NOT NULL,
   `phone` varchar(30) NOT NULL,
   `age` tinyint(4) DEFAULT NULL,
