@@ -1,7 +1,7 @@
 /*M!999999\- enable the sandbox mode */ 
 -- MariaDB dump 10.19-11.7.2-MariaDB, for Win64 (AMD64)
 --
--- Host: localhost    Database: produceKBO
+-- Host: localhost    Database: producekbo
 -- ------------------------------------------------------
 -- Server version	11.7.2-MariaDB
 
@@ -38,6 +38,15 @@ CREATE TABLE `allstar` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `allstar`
+--
+
+LOCK TABLES `allstar` WRITE;
+/*!40000 ALTER TABLE `allstar` DISABLE KEYS */;
+/*!40000 ALTER TABLE `allstar` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `allstarcandidate`
 --
 
@@ -57,6 +66,15 @@ CREATE TABLE `allstarcandidate` (
   CONSTRAINT `allstarcandidate_ibfk_2` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `allstarcandidate`
+--
+
+LOCK TABLES `allstarcandidate` WRITE;
+/*!40000 ALTER TABLE `allstarcandidate` DISABLE KEYS */;
+/*!40000 ALTER TABLE `allstarcandidate` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `allstarvote`
@@ -92,6 +110,15 @@ CREATE TABLE `allstarvote` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `allstarvote`
+--
+
+LOCK TABLES `allstarvote` WRITE;
+/*!40000 ALTER TABLE `allstarvote` DISABLE KEYS */;
+/*!40000 ALTER TABLE `allstarvote` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `batter`
 --
 
@@ -111,6 +138,15 @@ CREATE TABLE `batter` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `batter`
+--
+
+LOCK TABLES `batter` WRITE;
+/*!40000 ALTER TABLE `batter` DISABLE KEYS */;
+/*!40000 ALTER TABLE `batter` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `batterposition`
 --
 
@@ -120,12 +156,21 @@ DROP TABLE IF EXISTS `batterposition`;
 CREATE TABLE `batterposition` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `positioned_id` bigint(20) NOT NULL,
-  `batterPosition` enum('포수','1루수','2루수','3루수','유격수','좌익수','중견수','우익수','투수') DEFAULT NULL,
+  `batterPosition` varchar(50) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `positioned_id` (`positioned_id`),
   CONSTRAINT `batterposition_ibfk_1` FOREIGN KEY (`positioned_id`) REFERENCES `positioned` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `batterposition`
+--
+
+LOCK TABLES `batterposition` WRITE;
+/*!40000 ALTER TABLE `batterposition` DISABLE KEYS */;
+/*!40000 ALTER TABLE `batterposition` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `batterstats`
@@ -163,6 +208,15 @@ CREATE TABLE `batterstats` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `batterstats`
+--
+
+LOCK TABLES `batterstats` WRITE;
+/*!40000 ALTER TABLE `batterstats` DISABLE KEYS */;
+/*!40000 ALTER TABLE `batterstats` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `batterstatsfilter`
 --
 
@@ -182,6 +236,15 @@ CREATE TABLE `batterstatsfilter` (
   CONSTRAINT `batterstatsfilter_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `batterstatsfilter`
+--
+
+LOCK TABLES `batterstatsfilter` WRITE;
+/*!40000 ALTER TABLE `batterstatsfilter` DISABLE KEYS */;
+/*!40000 ALTER TABLE `batterstatsfilter` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `batterstatsfiltercondition`
@@ -204,6 +267,15 @@ CREATE TABLE `batterstatsfiltercondition` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `batterstatsfiltercondition`
+--
+
+LOCK TABLES `batterstatsfiltercondition` WRITE;
+/*!40000 ALTER TABLE `batterstatsfiltercondition` DISABLE KEYS */;
+/*!40000 ALTER TABLE `batterstatsfiltercondition` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `fanteam`
 --
 
@@ -221,6 +293,15 @@ CREATE TABLE `fanteam` (
   CONSTRAINT `fanteam_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `fanteam`
+--
+
+LOCK TABLES `fanteam` WRITE;
+/*!40000 ALTER TABLE `fanteam` DISABLE KEYS */;
+/*!40000 ALTER TABLE `fanteam` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `fanteammember`
@@ -242,6 +323,15 @@ CREATE TABLE `fanteammember` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `fanteammember`
+--
+
+LOCK TABLES `fanteammember` WRITE;
+/*!40000 ALTER TABLE `fanteammember` DISABLE KEYS */;
+/*!40000 ALTER TABLE `fanteammember` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `favoritelist`
 --
 
@@ -257,6 +347,15 @@ CREATE TABLE `favoritelist` (
   CONSTRAINT `favoritelist_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `favoritelist`
+--
+
+LOCK TABLES `favoritelist` WRITE;
+/*!40000 ALTER TABLE `favoritelist` DISABLE KEYS */;
+/*!40000 ALTER TABLE `favoritelist` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `favoriteplayers`
@@ -278,6 +377,15 @@ CREATE TABLE `favoriteplayers` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `favoriteplayers`
+--
+
+LOCK TABLES `favoriteplayers` WRITE;
+/*!40000 ALTER TABLE `favoriteplayers` DISABLE KEYS */;
+/*!40000 ALTER TABLE `favoriteplayers` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `leagueteam`
 --
 
@@ -293,6 +401,15 @@ CREATE TABLE `leagueteam` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `leagueteam`
+--
+
+LOCK TABLES `leagueteam` WRITE;
+/*!40000 ALTER TABLE `leagueteam` DISABLE KEYS */;
+/*!40000 ALTER TABLE `leagueteam` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `pitcher`
@@ -314,6 +431,15 @@ CREATE TABLE `pitcher` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `pitcher`
+--
+
+LOCK TABLES `pitcher` WRITE;
+/*!40000 ALTER TABLE `pitcher` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pitcher` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `pitcherposition`
 --
 
@@ -323,12 +449,21 @@ DROP TABLE IF EXISTS `pitcherposition`;
 CREATE TABLE `pitcherposition` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `positioned_id` bigint(20) NOT NULL,
-  `batterPosition` enum('선발투수','불펜투수') DEFAULT NULL,
+  `pitcherposition` varchar(50) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `positioned_id` (`positioned_id`),
   CONSTRAINT `pitcherposition_ibfk_1` FOREIGN KEY (`positioned_id`) REFERENCES `positioned` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pitcherposition`
+--
+
+LOCK TABLES `pitcherposition` WRITE;
+/*!40000 ALTER TABLE `pitcherposition` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pitcherposition` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `pitcherstats`
@@ -374,6 +509,15 @@ CREATE TABLE `pitcherstats` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `pitcherstats`
+--
+
+LOCK TABLES `pitcherstats` WRITE;
+/*!40000 ALTER TABLE `pitcherstats` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pitcherstats` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `pitcherstatsfilter`
 --
 
@@ -393,6 +537,15 @@ CREATE TABLE `pitcherstatsfilter` (
   CONSTRAINT `pitcherstatsfilter_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pitcherstatsfilter`
+--
+
+LOCK TABLES `pitcherstatsfilter` WRITE;
+/*!40000 ALTER TABLE `pitcherstatsfilter` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pitcherstatsfilter` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `pitcherstatsfiltercondition`
@@ -415,6 +568,15 @@ CREATE TABLE `pitcherstatsfiltercondition` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `pitcherstatsfiltercondition`
+--
+
+LOCK TABLES `pitcherstatsfiltercondition` WRITE;
+/*!40000 ALTER TABLE `pitcherstatsfiltercondition` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pitcherstatsfiltercondition` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `players`
 --
 
@@ -431,6 +593,15 @@ CREATE TABLE `players` (
   CONSTRAINT `players_ibfk_1` FOREIGN KEY (`leagueTeam_id`) REFERENCES `leagueteam` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `players`
+--
+
+LOCK TABLES `players` WRITE;
+/*!40000 ALTER TABLE `players` DISABLE KEYS */;
+/*!40000 ALTER TABLE `players` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `positioned`
@@ -450,6 +621,15 @@ CREATE TABLE `positioned` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `positioned`
+--
+
+LOCK TABLES `positioned` WRITE;
+/*!40000 ALTER TABLE `positioned` DISABLE KEYS */;
+/*!40000 ALTER TABLE `positioned` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `statbookmark`
 --
 
@@ -467,6 +647,15 @@ CREATE TABLE `statbookmark` (
   CONSTRAINT `statbookmark_ibfk_2` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `statbookmark`
+--
+
+LOCK TABLES `statbookmark` WRITE;
+/*!40000 ALTER TABLE `statbookmark` DISABLE KEYS */;
+/*!40000 ALTER TABLE `statbookmark` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `user`
@@ -490,6 +679,15 @@ CREATE TABLE `user` (
   CONSTRAINT `user_ibfk_1` FOREIGN KEY (`leagueTeam_id`) REFERENCES `leagueteam` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -500,4 +698,4 @@ CREATE TABLE `user` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2025-06-07 13:55:15
+-- Dump completed on 2025-06-08 13:54:36
