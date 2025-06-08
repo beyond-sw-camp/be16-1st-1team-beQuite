@@ -203,6 +203,7 @@ CREATE TABLE `batterstats` (
   `OBP` decimal(4,3) DEFAULT NULL,
   `MH` int(11) DEFAULT NULL,
   `RISP` decimal(4,3) DEFAULT NULL,
+  `ops` decimal(4,3) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -698,4 +699,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2025-06-08 13:54:36
+-- Dump completed on 2025-06-08 17:02:11
