@@ -204,7 +204,10 @@ CREATE TABLE `batterstats` (
   `MH` int(11) DEFAULT NULL,
   `RISP` decimal(4,3) DEFAULT NULL,
   `ops` decimal(4,3) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `players_id` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `batterstats_players_fk` (`players_id`),
+  CONSTRAINT `batterstats_players_fk` FOREIGN KEY (`players_id`) REFERENCES `players` (`id`) ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -475,7 +478,7 @@ DROP TABLE IF EXISTS `pitcherstats`;
 /*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `pitcherstats` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `ERA` decimal(4,3) NOT NULL,
+  `ERA` decimal(5,3) DEFAULT NULL,
   `G` int(11) NOT NULL,
   `W` int(11) DEFAULT NULL,
   `L` int(11) DEFAULT NULL,
@@ -505,7 +508,10 @@ CREATE TABLE `pitcherstats` (
   `IBB` int(11) DEFAULT NULL,
   `WP` int(11) DEFAULT NULL,
   `BK` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `players_id` bigint(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `pitcherstats_players_fk` (`players_id`),
+  CONSTRAINT `pitcherstats_players_fk` FOREIGN KEY (`players_id`) REFERENCES `players` (`id`) ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -699,4 +705,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2025-06-08 17:02:11
+-- Dump completed on 2025-06-08 19:19:14
