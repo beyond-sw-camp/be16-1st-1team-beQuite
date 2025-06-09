@@ -56,7 +56,7 @@
 - 올스타전 등 다양한 **이벤트 참여 및 투표**
 - **실시간 인기 선수 통계** 확인
 
-<img src="https://github.com/user-attachments/assets/715a2794-15f8-4037-85d2-b98b6744794f" width="200"> 
+<img src="https://github.com/user-attachments/assets/715a2794-15f8-4037-85d2-b98b6744794f" width="300"> 
 <img src="https://github.com/user-attachments/assets/5d689863-578e-4e94-8e6a-d2c55e92a70e" width="600">
 
 
