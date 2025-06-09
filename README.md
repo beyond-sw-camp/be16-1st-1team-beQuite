@@ -25,10 +25,11 @@ beQuite
 ---
 
 ## 🛠️ 기술 스택
-
-- **DB 설계**: MySQL (정규화 기반 관계형 설계)
-- **협업 도구**: GitHub, Google Docs, Figma 등
-
+<div>  <img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white"/> <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+<img src="https://img.shields.io/badge/ERD%20cloud-0000FF?style=for-the-badge&logo=data:image/svg+xml;base64,&logoColor=white"/>
+<img src="https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white"/>
+  <img src= "https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white"/>
+</div>
 ---
 
 ## 📌 프로젝트 개요
