@@ -8,7 +8,7 @@ ALTER TABLE `user` ADD COLUMN last_logout DATETIME NULL AFTER age;
 DROP PROCEDURE IF EXISTS 회원로그아웃;
 DELIMITER //
 
-CREATE PROCEDURE 로그아웃(
+CREATE PROCEDURE 회원원로그아웃(
     IN user_id_Input BIGINT(20)    -- 로그아웃할 회원의 ID
 )
 BEGIN
