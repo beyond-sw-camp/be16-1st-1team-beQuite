@@ -141,7 +141,8 @@
 
 <details>
   <summary>✅ ERD 관계 요약 및 관계성 분석 (produceKBO DB 기준)</summary>
-  <!-- | 관계 | 관계 유형 | 관계성 설명 |
+  <div>
+    | 관계 | 관계 유형 | 관계성 설명 |
 | --- | --- | --- |
 | **leagueteam – players** | **1:N (Mandatory)** | 한 팀은 여러 선수를 가질 수 있음. 선수는 반드시 팀에 소속됨. (FK: players.leagueTeam_id) |
 | **players – positioned** | **1:1 (Mandatory)** | 선수는 반드시 하나의 포지션(batter/pitcher)을 가짐 (FK: positioned.players_id) |
@@ -167,7 +168,8 @@
 | **allstarcandidate – players** | **1:N (Mandatory)** | 후보는 특정 선수로 구성됨 (FK: allstarcandidate.player_id) |
 | **allstar – allstarvote** | **1:N (Mandatory)** | 이벤트는 여러 투표를 가짐 (FK: allstarvote.allstar_id) |
 | **allstarvote – user** | **1:1 (Mandatory)** | 한 유저는 한 이벤트에 한 번만 투표할 수 있음 (UNIQUE KEY: user_id) |
-| **allstarvote – allstarcandidate** | **1:N (Mandatory)** | 투표는 후보자 테이블의 엔트리를 참조함 (FK: allstarvote.allstarCandidate_id) | -->
+| **allstarvote – allstarcandidate** | **1:N (Mandatory)** | 투표는 후보자 테이블의 엔트리를 참조함 (FK: allstarvote.allstarCandidate_id) |
+  </div>
 </details>
 ---
 
