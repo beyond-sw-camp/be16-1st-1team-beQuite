@@ -143,32 +143,32 @@
   <summary>✅ ERD 관계 요약 및 관계성 분석 (produceKBO DB 기준)</summary>
   <div>
     | 관계 | 관계 유형 | 관계성 설명 |
-| --- | --- | --- |
-| **leagueteam – players** | **1:N (Mandatory)** | 한 팀은 여러 선수를 가질 수 있음. 선수는 반드시 팀에 소속됨. (FK: players.leagueTeam_id) |
-| **players – positioned** | **1:1 (Mandatory)** | 선수는 반드시 하나의 포지션(batter/pitcher)을 가짐 (FK: positioned.players_id) |
-| **positioned – batterposition / pitcherposition** | **1:1 (Optional)** | positioned는 batter 또는 pitcher 중 하나의 포지션만 가짐 (FK: batterposition.positioned_id, pitcherposition.positioned_id) |
-| **batterposition – batter** | **1:1 (Mandatory)** | 각 batter는 batterposition을 반드시 가짐 (FK: batter.batterPosition_id) |
-| **pitcherposition – pitcher** | **1:1 (Mandatory)** | 각 pitcher는 pitcherposition을 반드시 가짐 (FK: pitcher.pitcherPosition_id) |
-| **batter – batterstats** | **1:1 (Mandatory)** | 타자는 스탯을 반드시 가짐 (FK: batter.batterStats_id) |
-| **pitcher – pitcherstats** | **1:1 (Mandatory)** | 투수도 스탯을 반드시 가짐 (FK: pitcher.pitcherStats_id) |
-| **players – batterstats / pitcherstats** | **1:N (Mandatory)** | 스탯은 players_id를 FK로 가지고 있음 (ON UPDATE CASCADE 설정) |
-| **user – favoritelist** | **1:N (Mandatory)** | 유저는 하나 이상의 즐겨찾기 목록을 가질 수 있음 (FK: favoritelist.user_id) |
-| **favoritelist – favoriteplayers** | **1:N (Mandatory)** | 목록은 여러 즐겨찾기 선수들을 가질 수 있음 (FK: favoriteplayers.favoriteList_id) |
-| **players – favoriteplayers** | **1:N (Optional)** | 선수는 즐겨찾기 목록에 포함되지 않을 수 있음 (FK: favoriteplayers.players_id) |
-| **user – fanteam** | **1:N (Optional)** | 유저는 0개 이상의 팬팀을 가질 수 있음 (FK: fanteam.user_id) |
-| **fanteam – fanteammember** | **1:N (Mandatory)** | 팬팀은 여러 명의 선수를 가질 수 있음 (FK: fanteammember.fanteam_id) |
-| **players – fanteammember** | **1:N (Optional)** | 선수는 팬팀에 포함되지 않을 수 있음 (FK: fanteammember.players_id) |
-| **user – batterstatsfilter / pitcherstatsfilter** | **1:N (Optional)** | 유저는 통계 필터를 만들 수 있음 (FK: batterstatsfilter.user_id, pitcherstatsfilter.user_id) |
-| **batterstatsfilter – batterstatsfiltercondition** | **1:N (Mandatory)** | 필터는 조건을 하나 이상 포함해야 함 (FK: batterstatsfiltercondition.batterStatsFilter_id) |
-| **pitcherstatsfilter – pitcherstatsfiltercondition** | **1:N (Mandatory)** | 마찬가지로 조건 필수 (FK: pitcherStatsFilterCondition.pitcherStatsFilter_id) |
-| **batterstatsfilter – batter** | **1:N (Mandatory)** | 필터는 특정 batter 엔트리를 가리킴 (FK: batterstatsfilter.batter_id) |
-| **pitcherstatsfilter – pitcher** | **1:N (Mandatory)** | 필터는 특정 pitcher 엔트리를 가리킴 (FK: pitcherstatsfilter.pitcher_id) |
-| **user – allstar** | **1:N (Mandatory)** | 유저는 여러 allstar 이벤트를 만들 수 있음 (FK: allstar.user_id) |
-| **allstar – allstarcandidate** | **1:N (Mandatory)** | 각 allstar 이벤트는 후보들을 가짐 (FK: allstarcandidate.allstar_id) |
-| **allstarcandidate – players** | **1:N (Mandatory)** | 후보는 특정 선수로 구성됨 (FK: allstarcandidate.player_id) |
-| **allstar – allstarvote** | **1:N (Mandatory)** | 이벤트는 여러 투표를 가짐 (FK: allstarvote.allstar_id) |
-| **allstarvote – user** | **1:1 (Mandatory)** | 한 유저는 한 이벤트에 한 번만 투표할 수 있음 (UNIQUE KEY: user_id) |
-| **allstarvote – allstarcandidate** | **1:N (Mandatory)** | 투표는 후보자 테이블의 엔트리를 참조함 (FK: allstarvote.allstarCandidate_id) |
+    | --- | --- | --- |
+    | **leagueteam – players** | **1:N (Mandatory)** | 한 팀은 여러 선수를 가질 수 있음. 선수는 반드시 팀에 소속됨. (FK: players.leagueTeam_id) |
+    | **players – positioned** | **1:1 (Mandatory)** | 선수는 반드시 하나의 포지션(batter/pitcher)을 가짐 (FK: positioned.players_id) |
+    | **positioned – batterposition / pitcherposition** | **1:1 (Optional)** | positioned는 batter 또는 pitcher 중 하나의 포지션만 가짐 (FK: batterposition.positioned_id, pitcherposition.positioned_id) |
+    | **batterposition – batter** | **1:1 (Mandatory)** | 각 batter는 batterposition을 반드시 가짐 (FK: batter.batterPosition_id) |
+    | **pitcherposition – pitcher** | **1:1 (Mandatory)** | 각 pitcher는 pitcherposition을 반드시 가짐 (FK: pitcher.pitcherPosition_id) |
+    | **batter – batterstats** | **1:1 (Mandatory)** | 타자는 스탯을 반드시 가짐 (FK: batter.batterStats_id) |
+    | **pitcher – pitcherstats** | **1:1 (Mandatory)** | 투수도 스탯을 반드시 가짐 (FK: pitcher.pitcherStats_id) |
+    | **players – batterstats / pitcherstats** | **1:N (Mandatory)** | 스탯은 players_id를 FK로 가지고 있음 (ON UPDATE CASCADE 설정) |
+    | **user – favoritelist** | **1:N (Mandatory)** | 유저는 하나 이상의 즐겨찾기 목록을 가질 수 있음 (FK: favoritelist.user_id) |
+    | **favoritelist – favoriteplayers** | **1:N (Mandatory)** | 목록은 여러 즐겨찾기 선수들을 가질 수 있음 (FK: favoriteplayers.favoriteList_id) |
+    | **players – favoriteplayers** | **1:N (Optional)** | 선수는 즐겨찾기 목록에 포함되지 않을 수 있음 (FK: favoriteplayers.players_id) |
+    | **user – fanteam** | **1:N (Optional)** | 유저는 0개 이상의 팬팀을 가질 수 있음 (FK: fanteam.user_id) |
+    | **fanteam – fanteammember** | **1:N (Mandatory)** | 팬팀은 여러 명의 선수를 가질 수 있음 (FK: fanteammember.fanteam_id) |
+    | **players – fanteammember** | **1:N (Optional)** | 선수는 팬팀에 포함되지 않을 수 있음 (FK: fanteammember.players_id) |
+    | **user – batterstatsfilter / pitcherstatsfilter** | **1:N (Optional)** | 유저는 통계 필터를 만들 수 있음 (FK: batterstatsfilter.user_id, pitcherstatsfilter.user_id) |
+    | **batterstatsfilter – batterstatsfiltercondition** | **1:N (Mandatory)** | 필터는 조건을 하나 이상 포함해야 함 (FK: batterstatsfiltercondition.batterStatsFilter_id) |
+    | **pitcherstatsfilter – pitcherstatsfiltercondition** | **1:N (Mandatory)** | 마찬가지로 조건 필수 (FK: pitcherStatsFilterCondition.pitcherStatsFilter_id) |
+    | **batterstatsfilter – batter** | **1:N (Mandatory)** | 필터는 특정 batter 엔트리를 가리킴 (FK: batterstatsfilter.batter_id) |
+    | **pitcherstatsfilter – pitcher** | **1:N (Mandatory)** | 필터는 특정 pitcher 엔트리를 가리킴 (FK: pitcherstatsfilter.pitcher_id) |
+    | **user – allstar** | **1:N (Mandatory)** | 유저는 여러 allstar 이벤트를 만들 수 있음 (FK: allstar.user_id) |
+    | **allstar – allstarcandidate** | **1:N (Mandatory)** | 각 allstar 이벤트는 후보들을 가짐 (FK: allstarcandidate.allstar_id) |
+    | **allstarcandidate – players** | **1:N (Mandatory)** | 후보는 특정 선수로 구성됨 (FK: allstarcandidate.player_id) |
+    | **allstar – allstarvote** | **1:N (Mandatory)** | 이벤트는 여러 투표를 가짐 (FK: allstarvote.allstar_id) |
+    | **allstarvote – user** | **1:1 (Mandatory)** | 한 유저는 한 이벤트에 한 번만 투표할 수 있음 (UNIQUE KEY: user_id) |
+    | **allstarvote – allstarcandidate** | **1:N (Mandatory)** | 투표는 후보자 테이블의 엔트리를 참조함 (FK: allstarvote.allstarCandidate_id) |
   </div>
 </details>
 ---
