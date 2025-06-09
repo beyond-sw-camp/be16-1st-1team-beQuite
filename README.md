@@ -27,8 +27,6 @@ beQuite
 ## 🛠️ 기술 스택
 
 - **DB 설계**: MySQL (정규화 기반 관계형 설계)
-- **Backend (향후 연동 대상)**: Node.js / Spring 예상
-- **사용자 인터페이스 (예정)**: Vue.js, React 등 SPA 프레임워크
 - **협업 도구**: GitHub, Google Docs, Figma 등
 
 ---
