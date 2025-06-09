@@ -141,7 +141,7 @@
 
 <details>
   <summary>✅ ERD 관계 요약 및 관계성 분석 (produceKBO DB 기준)</summary>
-  <div>
+  <div markdown="1">>
     | 관계 | 관계 유형 | 관계성 설명 |
     | --- | --- | --- |
     | **leagueteam – players** | **1:N (Mandatory)** | 한 팀은 여러 선수를 가질 수 있음. 선수는 반드시 팀에 소속됨. (FK: players.leagueTeam_id) |
