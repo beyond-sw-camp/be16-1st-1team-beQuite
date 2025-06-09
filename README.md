@@ -4,6 +4,8 @@
 
 팬 참여형 가상선수단 플랫폼
 ![Image](https://github.com/user-attachments/assets/0f19ed38-176c-4348-9e9c-3ca97d4a5cea)
+<img src="https://github.com/user-attachments/assets/0f19ed38-176c-4348-9e9c-3ca97d4a5cea" width="800">
+
 ---
 
 목차
