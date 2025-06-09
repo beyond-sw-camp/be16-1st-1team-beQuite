@@ -107,7 +107,7 @@ beQuite
 
 [👉 WBS 문서 바로가기](https://docs.google.com/spreadsheets/d/1OEgj-mFE1KM8ZTvEe6eQ-Z5zDuUv6DMABl3xjqem61k/edit?gid=0#gid=0)
 
-![image.png](attachment:4fe30da8-a03b-47da-8ce6-e4398e568ca2:image.png)
+<img width="522" alt="Image" src="https://github.com/user-attachments/assets/28b77d9b-6275-495d-a590-750b89359fb8" />
 
 ---
 
@@ -115,7 +115,7 @@ beQuite
 
 [👉 요구사항 문서 바로가기](https://docs.google.com/spreadsheets/d/1OEgj-mFE1KM8ZTvEe6eQ-Z5zDuUv6DMABl3xjqem61k/edit?gid=1692108676#gid=1692108676)
 
-![image.png](attachment:81da1e51-f69a-43fb-9250-09e6ddd72fbf:image.png)
+<img width="694" alt="Image" src="https://github.com/user-attachments/assets/25405ba4-6429-4a3d-acbc-adde9d32c3ee" />
 
 ---
 
