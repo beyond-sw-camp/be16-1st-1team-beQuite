@@ -12,7 +12,7 @@
 
 ## 🤫 팀
 
-beQuite
+![Image](https://github.com/user-attachments/assets/dd0aeb0b-0eaf-4c5f-b951-9df18b859a39)
 
 ---
 
