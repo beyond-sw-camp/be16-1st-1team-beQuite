@@ -123,7 +123,7 @@ beQuite
 
 [👉 ERD 바로가기](https://www.erdcloud.com/d/5tNiz3Qt4ZAQzGLLr)
 
-![KBO.png](attachment:70bbb142-9d9d-48de-8052-54a613c5e696:KBO.png)
+![Image](https://github.com/user-attachments/assets/361c86fb-597b-4995-8d8e-b2a0527c2b70)
 
 ---
 
