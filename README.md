@@ -53,7 +53,7 @@
 - 좋아하는 선수들로 나만의 **가상 선수단 구성**
 - 올스타전 등 다양한 **이벤트 참여 및 투표**
 - **실시간 인기 선수 통계** 확인
-- 
+
 <img src="https://github.com/user-attachments/assets/5d689863-578e-4e94-8e6a-d2c55e92a70e" width="600">
 
 
